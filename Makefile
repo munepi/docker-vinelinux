@@ -9,4 +9,7 @@ vineseed/VineSeed_x86_64-docker-snapshot.tar.xz:
 local/vbuilder:
 	docker build -t local/vbuilder  ./vbuilder/
 
+clean:
+	find  . -name "*~" | xargs rm -f
+
 # end of file
