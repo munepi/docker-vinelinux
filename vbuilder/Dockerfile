@@ -3,9 +3,7 @@ FROM local/vineseed
 LABEL maintainer="Munehiro Yamamoto <munepi@vinelinux.org>" \
         org.label-schema.schema-version="1.0" \
         org.label-schema.name="vbuilder image" \
-        org.label-schema.vendor="Vine Linux" \
-        org.label-schema.license="GPLv2" \
-        org.label-schema.build-date="20190603"
+        org.label-schema.build-date="20190607"
 
 ## install vbuilder
 RUN apt update && \
