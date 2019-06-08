@@ -2,7 +2,7 @@
 
 set -e
 
-CONTAINER_NAME=${CONTAINER_NAME:-make-vlseed-min} # $(uuidgen)
+CONTAINER_NAME=${CONTAINER_NAME:-build-vlseed-min} # $(uuidgen)
 DOCKER_VINESEED=${DOCKER_VINESEED:-munepi/vineseed} # local/vineseed
 
 target_image=VineSeed_x86_64-docker-$(date +%Y%m%d).tar.xz
@@ -38,8 +38,9 @@ docker exec -it \
               rm -rf ./usr/share/locale/* && \\
               mv ./usr/share/locale_temp/* ./usr/share/locale/ && \\
               rm -rf ./usr/share/locale_temp"
-docker exec -it ${CONTAINER_NAME}  \
-       /bin/bash -c 'rm -rf /usr/share/doc/*'
+docker exec -it \
+       -w /var/local/vbootstrap/VineSeed_x86_64  ${CONTAINER_NAME}  \
+       /bin/bash -c 'rm -rf ./usr/share/doc/*'
 
 ## make the target image
 docker exec -it ${CONTAINER_NAME}  \
