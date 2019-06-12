@@ -9,7 +9,7 @@ This repository provides an **unofficial** base image of VineSeed x86_64.
  * [Vine Linux Official Website](https://vinelinux.org/) (in Japanese)
  * [Brief Introduction to Vine Linux for non-Japanese people](https://vinelinux.org/vlmagazine/20110617.html) (in English)
 
-![](https://vinelinux.org/images/vinelinux-logo.png)
+<!-- ![](https://vinelinux.org/images/vinelinux-logo.png) -->
 
 # About this image
 The `munepi/vineseed:latest` tag will always point the latest unstable snapshot. 
