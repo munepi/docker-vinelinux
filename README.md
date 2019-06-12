@@ -1,3 +1,4 @@
-# munepi/vineseed
-Unofficial build of VineSeed, Vine Linux unstable snapshot
+munepi/vineseed
+==========
 
+Unofficial build of VineSeed, Vine Linux unstable snapshot
