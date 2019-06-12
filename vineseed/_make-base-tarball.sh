@@ -22,11 +22,9 @@ docker run -it --detach --name ${CONTAINER_NAME} \
 
 ## build VineSeed base image via vbuilder
 docker exec -it ${CONTAINER_NAME}  \
-       apt update
-docker exec -it ${CONTAINER_NAME}  \
-       apt -y install tar xz vbootstrap
-docker exec -it ${CONTAINER_NAME}  \
-       vbuilder --version VineSeed --no-build-essential build
+       /bin/bash -c "apt update && \\
+           apt -y install tar xz vbootstrap && \\
+           vbuilder --version VineSeed --no-build-essential build"
 
 ## removed unpacked files
 docker exec -it ${CONTAINER_NAME}  \
@@ -34,10 +32,10 @@ docker exec -it ${CONTAINER_NAME}  \
 docker exec -it \
        -w /var/local/vbootstrap/VineSeed_x86_64  ${CONTAINER_NAME}  \
        /bin/bash -c "mkdir -p ./usr/share/locale_temp && \\
-              mv ./usr/share/locale/en* ./usr/share/locale/ja ./usr/share/locale/locale.alias  ./usr/share/locale_temp/ && \\
-              rm -rf ./usr/share/locale/* && \\
-              mv ./usr/share/locale_temp/* ./usr/share/locale/ && \\
-              rm -rf ./usr/share/locale_temp"
+           mv ./usr/share/locale/en* ./usr/share/locale/ja ./usr/share/locale/locale.alias  ./usr/share/locale_temp/ && \\
+           rm -rf ./usr/share/locale/* && \\
+           mv ./usr/share/locale_temp/* ./usr/share/locale/ && \\
+           rm -rf ./usr/share/locale_temp"
 docker exec -it \
        -w /var/local/vbootstrap/VineSeed_x86_64  ${CONTAINER_NAME}  \
        /bin/bash -c 'rm -rf ./usr/share/doc/*'
