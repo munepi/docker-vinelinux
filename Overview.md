@@ -1,5 +1,6 @@
 # Supported tags and respective `Dockerfile` links
-* [`latest`, `20190607`  (munepi/docker-vinelinux/Dockerfile)](https://github.com/munepi/docker-vinelinux/blob/20190607/vineseed/Dockerfile)
+* [`latest`, `20200823`  (munepi/docker-vinelinux/Dockerfile)](https://github.com/munepi/docker-vinelinux/blob/20200823/vineseed/Dockerfile)
+* [`20190607`  (munepi/docker-vinelinux/Dockerfile)](https://github.com/munepi/docker-vinelinux/blob/20190607/vineseed/Dockerfile)
 * [`20190602`  (munepi/docker-vinelinux/Dockerfile)](https://github.com/munepi/docker-vinelinux/blob/20190602/vineseed/Dockerfile)
 
 # What is VineSeed?
