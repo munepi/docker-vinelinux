@@ -3,7 +3,7 @@ FROM local/vineseed
 LABEL maintainer="Munehiro Yamamoto <munepi@vinelinux.org>" \
         org.label-schema.schema-version="1.0" \
         org.label-schema.name="vbuilder image" \
-        org.label-schema.build-date="20190607"
+        org.label-schema.build-date="20200823"
 
 ## install vbuilder
 RUN apt update && \
