@@ -6,15 +6,18 @@ endif
 
 all:
 
+.PHONY: local/vineseed
 local/vineseed:
 	${__docker_build} -t local/vineseed  ./vineseed/
 
 vineseed/VineSeed_x86_64-docker-snapshot.tar.xz:
 	cd vineseed && ./_make-base-tarball.sh
 
+.PHONY: local/vbuilder
 local/vbuilder:
 	${__docker_build} -t local/vbuilder  ./vbuilder/
 
+.PHONY: clean
 clean:
 	find  . -name "*~" | xargs rm -f
 
